@@ -1,0 +1,434 @@
+
+<body><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Alex Morgan | Lecturer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- PARTICLES BACKGROUND -->
+  <canvas id="particles"></canvas>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <span class="nav-logo">&lt;AM /&gt;</span>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#modules">Modules</a></li>
+      <li><a href="#funfacts">Facts</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="hero">
+    <div class="hero-inner">
+
+      <!-- CSS Avatar -->
+      <div class="avatar-wrap">
+        <div class="avatar-ring"></div>
+        <div class="avatar-ring2"></div>
+        <div class="avatar-body">
+          <div class="avatar-head">
+            <div class="avatar-eyes">
+              <div class="avatar-eye"></div>
+              <div class="avatar-eye"></div>
+            </div>
+          </div>
+          <div class="avatar-body-shirt"></div>
+          <div class="glow-ring"></div>
+        </div>
+      </div>
+
+      <span class="hero-tag">// lecturer · innovator · mentor</span>
+      <h1 class="hero-name">Dr. Alex Morgan</h1>
+      <p class="hero-title">BSc (Hons) · MSc · PhD Computer Science</p>
+
+      <!-- Typewriter tagline (text injected by JS) -->
+      <p class="hero-tagline">
+        <span id="typed-tagline"></span>
+        <span class="typed-cursor"></span>
+      </p>
+
+      <div class="hero-btns">
+        <a href="#modules" class="btn btn-primary">View Modules</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>SCROLL</span>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Bio Card -->
+        <div class="about-card about-card-glow reveal">
+          <div class="about-avatar-mini">🎓</div>
+          <div class="typing-text" id="about-typing"></div>
+          <h3 class="about-name">Dr. Alex Morgan</h3>
+          <p class="about-role">// Senior Lecturer · Department of IT</p>
+          <div class="badge-row">
+            <span class="badge badge-neon"> Problem Solver</span>
+            <span class="badge badge-purple"> Innovator</span>
+            <span class="badge badge-blue"> Mentor</span>
+            <span class="badge badge-red"> Passionate</span>
+          </div>
+          <div class="stat-row">
+            <div class="stat">
+              <div class="stat-num">8+</div>
+              <div class="stat-label">Years Teaching</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">500+</div>
+              <div class="stat-label">Students</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">6</div>
+              <div class="stat-label">Modules</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- About Text -->
+        <div class="about-content reveal">
+          <span class="section-tag">// about_me.bio</span>
+          <h2 class="section-title">Shaping the <span class="neon-text">Next Generation</span> of Developers</h2>
+          <p>Dr. Alex Morgan is a passionate Senior Lecturer at Belgium Campus iTversity, specialising in software engineering, innovative leadership, and full-stack development. With over eight years of teaching experience, Dr. Morgan bridges the gap between academic theory and real-world application.</p>
+          <p>Known for an energetic teaching style, Dr. Morgan believes that every student has the potential to become a world-class developer — they just need the right environment, the right challenge, and someone who believes in them.</p>
+          <div class="philosophy-box">
+            <p>"Technology is just a tool. My job is to help you think like an engineer — to break any problem down until it's solvable, and then to build something the world hasn't seen before."</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MODULES SECTION ===== -->
+  <section id="modules">
+    <div class="container">
+
+      <div class="reveal">
+        <span class="section-tag">// modules_taught.array</span>
+        <h2 class="section-title">Modules &amp; <span class="neon-text">Expertise</span></h2>
+        <p>Hover over a card to reveal module details. Each card flips to show what you'll learn inside.</p>
+      </div>
+
+      <div class="modules-grid reveal">
+
+        <!-- Module Card 1 -->
+        <div class="module-card">
+          <div class="module-card-inner">
+            <div class="module-front">
+              <div>
+                <span class="module-icon">💡</span>
+                <span class="module-code">INL261</span>
+                <h3 class="module-name">Innovation &amp; Leadership</h3>
+              </div>
+              <span class="module-level">NQF Level 6</span>
+            </div>
+            <div class="module-back">
+              <p>Explores AI-assisted development, team dynamics, and real-world project delivery in modern tech environments.</p>
+              <div class="module-detail">Agile Methodologies</div>
+              <div class="module-detail">AI-Assisted Development</div>
+              <div class="module-detail">Team Leadership</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module Card 2 -->
+        <div class="module-card">
+          <div class="module-card-inner">
+            <div class="module-front">
+              <div>
+                <span class="module-icon">🌐</span>
+                <span class="module-code">WEB301</span>
+                <h3 class="module-name">Advanced Web Development</h3>
+              </div>
+              <span class="module-level">NQF Level 6</span>
+            </div>
+            <div class="module-back">
+              <p>Full-stack web application development using modern frameworks, APIs, and deployment pipelines.</p>
+              <div class="module-detail">React &amp; Node.js</div>
+              <div class="module-detail">RESTful APIs</div>
+              <div class="module-detail">CI/CD Pipelines</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module Card 3 -->
+        <div class="module-card">
+          <div class="module-card-inner">
+            <div class="module-front">
+              <div>
+                <span class="module-icon">🔐</span>
+                <span class="module-code">SEC201</span>
+                <h3 class="module-name">Cybersecurity Fundamentals</h3>
+              </div>
+              <span class="module-level">NQF Level 5</span>
+            </div>
+            <div class="module-back">
+              <p>Introduction to ethical hacking, network security, and secure software development principles.</p>
+              <div class="module-detail">Ethical Hacking Basics</div>
+              <div class="module-detail">Secure Coding</div>
+              <div class="module-detail">OWASP Top 10</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module Card 4 -->
+        <div class="module-card">
+          <div class="module-card-inner">
+            <div class="module-front">
+              <div>
+                <span class="module-icon">🤖</span>
+                <span class="module-code">AIT401</span>
+                <h3 class="module-name">Applied AI &amp; Machine Learning</h3>
+              </div>
+              <span class="module-level">NQF Level 7</span>
+            </div>
+            <div class="module-back">
+              <p>Practical machine learning model development, data pipelines, and responsible AI deployment strategies.</p>
+              <div class="module-detail">Python &amp; TensorFlow</div>
+              <div class="module-detail">Model Evaluation</div>
+              <div class="module-detail">Responsible AI</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module Card 5 -->
+        <div class="module-card">
+          <div class="module-card-inner">
+            <div class="module-front">
+              <div>
+                <span class="module-icon">🗄️</span>
+                <span class="module-code">DBS102</span>
+                <h3 class="module-name">Database Systems</h3>
+              </div>
+              <span class="module-level">NQF Level 5</span>
+            </div>
+            <div class="module-back">
+              <p>Relational and NoSQL database design, query optimization, and data-driven application architecture.</p>
+              <div class="module-detail">SQL &amp; PostgreSQL</div>
+              <div class="module-detail">MongoDB</div>
+              <div class="module-detail">Data Modelling</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module Card 6 -->
+        <div class="module-card">
+          <div class="module-card-inner">
+            <div class="module-front">
+              <div>
+                <span class="module-icon">☁️</span>
+                <span class="module-code">CLO305</span>
+                <h3 class="module-name">Cloud Computing</h3>
+              </div>
+              <span class="module-level">NQF Level 6</span>
+            </div>
+            <div class="module-back">
+              <p>Cloud architecture, serverless functions, containerisation, and modern DevOps practices.</p>
+              <div class="module-detail">AWS &amp; Azure</div>
+              <div class="module-detail">Docker &amp; Kubernetes</div>
+              <div class="module-detail">Serverless</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="flip-hint reveal">// hover cards to flip · discover what's inside</p>
+    </div>
+  </section>
+
+  <!-- ===== FUN FACTS SECTION ===== -->
+  <section id="funfacts">
+    <div class="container">
+
+      <div class="reveal">
+        <span class="section-tag">// fun_facts.reveal()</span>
+        <h2 class="section-title">Facts &amp; <span class="neon-text">Superpowers</span></h2>
+        <p>Click each card to reveal something surprising about Dr. Morgan.</p>
+      </div>
+
+      <div class="facts-grid">
+
+        <!-- Superpower Banner -->
+        <div class="superpower-card reveal">
+          <div class="superpower-icon">⚡</div>
+          <div class="superpower-content">
+            <div class="superpower-label">// primary_superpower</div>
+            <h3 class="superpower-title">The Explainer</h3>
+            <p class="superpower-desc">Dr. Morgan has an uncanny ability to take the most complex system architecture, data structure, or algorithm and break it down into an analogy so simple that you'll wonder how you ever found it confusing. Students consistently say: "You just get how to explain things."</p>
+          </div>
+        </div>
+
+        <!-- Fact Card 1 -->
+        <div class="fact-card reveal" onclick="this.classList.toggle('revealed')">
+          <div class="fact-prompt">
+            <div class="fact-prompt-icon">🎸</div>
+            <div class="fact-prompt-text">// click_to_reveal</div>
+          </div>
+          <div class="fact-content">
+            <div class="fact-emoji">🎸</div>
+            <div class="fact-label">fun_fact_01</div>
+            <div class="fact-text">Plays bass guitar in a weekend jazz band — claims it's "just like debugging: finding the groove nobody noticed was missing."</div>
+          </div>
+        </div>
+
+        <!-- Fact Card 2 -->
+        <div class="fact-card reveal" onclick="this.classList.toggle('revealed')">
+          <div class="fact-prompt">
+            <div class="fact-prompt-icon">☕</div>
+            <div class="fact-prompt-text">// click_to_reveal</div>
+          </div>
+          <div class="fact-content">
+            <div class="fact-emoji">☕</div>
+            <div class="fact-label">fun_fact_02</div>
+            <div class="fact-text">Has consumed an estimated 4,200+ cups of coffee since starting at Belgium Campus. Considers it a performance optimization tool.</div>
+          </div>
+        </div>
+
+        <!-- Fact Card 3 -->
+        <div class="fact-card reveal" onclick="this.classList.toggle('revealed')">
+          <div class="fact-prompt">
+            <div class="fact-prompt-icon">🏔️</div>
+            <div class="fact-prompt-text">// click_to_reveal</div>
+          </div>
+          <div class="fact-content">
+            <div class="fact-emoji">🏔️</div>
+            <div class="fact-label">fun_fact_03</div>
+            <div class="fact-text">Once spent 3 days hiking the Drakensberg with no phone signal — and came back with the idea for the INL261 project brief.</div>
+          </div>
+        </div>
+
+        <!-- Fact Card 4 -->
+        <div class="fact-card reveal" onclick="this.classList.toggle('revealed')">
+          <div class="fact-prompt">
+            <div class="fact-prompt-icon">🎮</div>
+            <div class="fact-prompt-text">// click_to_reveal</div>
+          </div>
+          <div class="fact-content">
+            <div class="fact-emoji">🎮</div>
+            <div class="fact-label">fun_fact_04</div>
+            <div class="fact-text">Built a full game engine from scratch in C++ during their PhD — "for fun" — and it actually ran Pong at 60fps.</div>
+          </div>
+        </div>
+
+        <!-- Fact Card 5 -->
+        <div class="fact-card reveal" onclick="this.classList.toggle('revealed')">
+          <div class="fact-prompt">
+            <div class="fact-prompt-icon">📚</div>
+            <div class="fact-prompt-text">// click_to_reveal</div>
+          </div>
+          <div class="fact-content">
+            <div class="fact-emoji">📚</div>
+            <div class="fact-label">fun_fact_05</div>
+            <div class="fact-text">Has read the entire OWASP documentation — twice. Not for work. Just because they "wanted to know how attackers think."</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact">
+    <div class="container">
+
+      <div class="reveal">
+        <span class="section-tag">// contact.init()</span>
+        <h2 class="section-title">Let's <span class="neon-text">Connect</span></h2>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Office Info Card -->
+        <div class="office-card reveal">
+          <div class="office-title">// office_hours.json</div>
+
+          <div class="office-row">
+            <div class="office-icon">🏢</div>
+            <div class="office-info">
+              <label>Office</label>
+              <p>Room B204, Building B — Belgium Campus</p>
+            </div>
+          </div>
+
+          <div class="office-row">
+            <div class="office-icon">🏫</div>
+            <div class="office-info">
+              <label>Department</label>
+              <p>Faculty of Information Technology</p>
+            </div>
+          </div>
+
+          <div class="office-row">
+            <div class="office-icon">📧</div>
+            <div class="office-info">
+              <label>Campus Email</label>
+              <p>a.morgan@belgiumcampus.ac.za</p>
+            </div>
+          </div>
+
+          <!-- Office Hours Grid -->
+          <div class="hours-grid">
+            <div class="hour-slot">
+              <div class="hour-day">Monday</div>
+              <div class="hour-time">10:00 – 12:00</div>
+            </div>
+            <div class="hour-slot">
+              <div class="hour-day">Tuesday</div>
+              <div class="hour-time">14:00 – 16:00</div>
+            </div>
+            <div class="hour-slot">
+              <div class="hour-day">Wednesday</div>
+              <div class="hour-time">09:00 – 11:00</div>
+            </div>
+            <div class="hour-slot">
+              <div class="hour-day">Thursday</div>
+              <div class="hour-time">13:00 – 15:00</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Connect Side -->
+        <div class="connect-side reveal">
+          <h3 class="connect-title">Office Hours &amp; Student Support</h3>
+          <p class="connect-desc">Dr. Morgan's door is always open — metaphorically and literally. Whether you're stuck on an assignment, exploring a career path, or just want to talk tech, drop by during office hours or send an email. Response time is typically within 24 hours on weekdays.</p>
+          <a href="mailto:a.morgan@belgiumcampus.ac.za" class="cta-btn">📬 Send an Email</a>
+          <a href="#modules" class="cta-btn-outline">📖 View My Modules</a>
+          <div class="quote-box">
+            <p class="quote-label">// favourite_quote</p>
+            <p class="quote-text">"The best developers I've ever met weren't the smartest in the room — they were the most relentlessly curious. Stay curious."</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>// Built with Claude AI · Deployed on GitHub Pages · &copy; 2026 INL261 Group Project</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
+    
+</body>
+</html>
