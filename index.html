@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reason Sithole | Lecturer Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Sora:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ───────────────────────────────────────────────
+       NAV
+  ─────────────────────────────────────────────────── -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">RS<span class="dot">.</span></div>
+    <ul class="nav__links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#credentials">Credentials</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#roles">Roles</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ───────────────────────────────────────────────
+       1. HERO SECTION
+  ─────────────────────────────────────────────────── -->
+  <section class="hero" id="hero">
+    <!-- Particle canvas -->
+    <canvas class="hero__canvas" id="particleCanvas"></canvas>
+
+    <!-- Space / Mars background layers -->
+    <div class="hero__bg">
+      <div class="hero__bg-gradient"></div>
+      <div class="hero__bg-terrain"></div>
+      <div class="hero__bg-sun"></div>
+      <div class="hero__bg-stars"></div>
+    </div>
+
+    <!-- Orange wave divider at bottom -->
+    <div class="hero__wave"></div>
+
+    <!-- Content -->
+    <div class="hero__content">
+      <div class="hero__text" data-parallax="0.04">
+        <h1 class="hero__title">
+          <span class="hero__title-line reveal-word">Welcome to</span>
+          <span class="hero__title-name reveal-word">Reason Sithole's</span>
+          <span class="hero__title-line reveal-word">Portfolio</span>
+        </h1>
+        <p class="hero__sub reveal-fade">IT Lecturer · Innovator · Mentor at Belgium Campus iTversity</p>
+        <a href="#contact" class="btn btn--primary reveal-fade">Need the lecturer info</a>
+      </div>
+
+      <!-- Astronaut figure -->
+      <div class="hero__astronaut" data-parallax="-0.02">
+        <div class="hero__astronaut-img">
+          <svg viewBox="0 0 320 600" xmlns="http://www.w3.org/2000/svg" class="astronaut-svg">
+            <!-- Helmet -->
+            <ellipse cx="160" cy="110" rx="70" ry="80" fill="#d8dde6" stroke="#b0b8c8" stroke-width="3"/>
+            <ellipse cx="160" cy="110" rx="55" ry="65" fill="#1a1e2e" opacity="0.85"/>
+            <!-- Visor glare -->
+            <ellipse cx="148" cy="90" rx="18" ry="10" fill="white" opacity="0.18" transform="rotate(-20,148,90)"/>
+            <!-- Gold visor tint -->
+            <ellipse cx="160" cy="110" rx="45" ry="55" fill="#c8860a" opacity="0.25"/>
+            <!-- Neck ring -->
+            <rect x="130" y="180" width="60" height="18" rx="9" fill="#b0b8c8"/>
+            <!-- Body suit -->
+            <path d="M90 198 Q70 220 65 300 L255 300 Q250 220 230 198 Z" fill="#e2e6ef" stroke="#b0b8c8" stroke-width="2"/>
+            <!-- Backpack/life support -->
+            <rect x="200" y="210" width="52" height="80" rx="10" fill="#c5cad6" stroke="#a0a8b8" stroke-width="2"/>
+            <rect x="208" y="222" width="18" height="10" rx="3" fill="#f5a623"/>
+            <!-- Left arm -->
+            <path d="M90 210 Q55 250 50 310 Q70 320 85 300 Q80 260 100 230 Z" fill="#e2e6ef" stroke="#b0b8c8" stroke-width="2"/>
+            <ellipse cx="55" cy="318" rx="18" ry="12" fill="#c5cad6" stroke="#a0a8b8" stroke-width="2"/>
+            <!-- Right arm -->
+            <path d="M230 210 Q265 250 270 310 Q250 320 235 300 Q240 260 220 230 Z" fill="#e2e6ef" stroke="#b0b8c8" stroke-width="2"/>
+            <ellipse cx="265" cy="318" rx="18" ry="12" fill="#c5cad6" stroke="#a0a8b8" stroke-width="2"/>
+            <!-- Torso detail straps -->
+            <line x1="130" y1="200" x2="130" y2="295" stroke="#b0b8c8" stroke-width="3"/>
+            <line x1="190" y1="200" x2="190" y2="295" stroke="#b0b8c8" stroke-width="3"/>
+            <line x1="100" y1="248" x2="220" y2="248" stroke="#b0b8c8" stroke-width="2"/>
+            <!-- Belt -->
+            <rect x="85" y="294" width="150" height="18" rx="5" fill="#c5cad6" stroke="#a0a8b8" stroke-width="2"/>
+            <!-- Left leg -->
+            <path d="M100 308 Q88 380 90 450 L125 450 Q122 380 130 308 Z" fill="#e2e6ef" stroke="#b0b8c8" stroke-width="2"/>
+            <!-- Right leg -->
+            <path d="M190 308 Q202 380 210 450 L175 450 Q178 380 170 308 Z" fill="#e2e6ef" stroke="#b0b8c8" stroke-width="2"/>
+            <!-- Boots -->
+            <ellipse cx="107" cy="456" rx="22" ry="12" fill="#c5cad6" stroke="#a0a8b8" stroke-width="2"/>
+            <ellipse cx="193" cy="456" rx="22" ry="12" fill="#c5cad6" stroke="#a0a8b8" stroke-width="2"/>
+            <!-- Equipment on legs -->
+            <rect x="90" y="360" width="32" height="22" rx="4" fill="#f5a623" opacity="0.8"/>
+            <!-- Helmet rim detail -->
+            <circle cx="160" cy="110" r="70" fill="none" stroke="#c8860a" stroke-width="2" opacity="0.6"/>
+          </svg>
+        </div>
+        <!-- Orbit ring decoration -->
+        <div class="hero__orbit">
+          <div class="hero__orbit-ring ring1"></div>
+          <div class="hero__orbit-ring ring2"></div>
+          <div class="hero__orbit-dot dot-a"></div>
+          <div class="hero__orbit-dot dot-b"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating HUD widgets -->
+    <div class="hud hud--reviews reveal-fade" style="--delay:1.2s">
+      <span class="hud__icon">♥</span>
+      <div>
+        <div class="hud__title">Excellent Staff &amp;</div>
+        <div class="hud__title">Student Reviews</div>
+        <svg class="hud__sparkline" viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg">
+          <polyline points="0,25 15,20 30,22 45,12 60,18 75,8 90,14 105,5 120,10" fill="none" stroke="#f5a623" stroke-width="2" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="hud hud--career reveal-fade" style="--delay:1.4s">
+      <div class="hud__label">📊 Career Progress</div>
+      <svg class="hud__chart" viewBox="0 0 140 60" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#f5a623" stop-opacity="0.6"/>
+            <stop offset="100%" stop-color="#f5a623" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <path d="M0,55 Q20,50 35,42 Q55,32 75,28 Q95,20 110,15 Q125,10 140,5 L140,60 L0,60 Z" fill="url(#chartGrad)"/>
+        <polyline points="0,55 35,42 75,28 110,15 140,5" fill="none" stroke="#f5a623" stroke-width="2"/>
+        <circle cx="75" cy="28" r="4" fill="#f5a623"/>
+      </svg>
+    </div>
+
+    <!-- Radar/gauge widget -->
+    <div class="hud hud--gauge reveal-fade" style="--delay:1.6s">
+      <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" width="80" height="80">
+        <circle cx="40" cy="40" r="34" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="6"/>
+        <circle cx="40" cy="40" r="34" fill="none" stroke="#f5a623" stroke-width="6"
+          stroke-dasharray="160 214" stroke-dashoffset="53" stroke-linecap="round"
+          transform="rotate(-90 40 40)"/>
+        <circle cx="40" cy="40" r="6" fill="#f5a623"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ───────────────────────────────────────────────
+       2. CAREER CREDENTIALS
+  ─────────────────────────────────────────────────── -->
+  <section class="credentials" id="credentials">
+    <!-- Dark space banner -->
+    <div class="credentials__banner">
+      <!-- Stars -->
+      <div class="cred-stars"></div>
+      <!-- Mars planet top-right -->
+      <div class="credentials__planet"></div>
+      <!-- Satellite SVG -->
+      <div class="credentials__satellite">
+        <svg viewBox="0 0 180 140" xmlns="http://www.w3.org/2000/svg">
+          <!-- Main body -->
+          <rect x="70" y="52" width="40" height="36" rx="6" fill="#d0d5e0" stroke="#a0a8b8" stroke-width="2"/>
+          <!-- Solar panels left -->
+          <rect x="4" y="58" width="62" height="24" rx="4" fill="#3a5a8a" stroke="#5a7aaa" stroke-width="1.5"/>
+          <line x1="25" y1="58" x2="25" y2="82" stroke="#5a7aaa" stroke-width="1"/>
+          <line x1="45" y1="58" x2="45" y2="82" stroke="#5a7aaa" stroke-width="1"/>
+          <!-- Solar panels right -->
+          <rect x="114" y="58" width="62" height="24" rx="4" fill="#3a5a8a" stroke="#5a7aaa" stroke-width="1.5"/>
+          <line x1="133" y1="58" x2="133" y2="82" stroke="#5a7aaa" stroke-width="1"/>
+          <line x1="153" y1="58" x2="153" y2="82" stroke="#5a7aaa" stroke-width="1"/>
+          <!-- Dish -->
+          <ellipse cx="90" cy="38" rx="22" ry="14" fill="#c0c8d8" stroke="#a0a8b8" stroke-width="2"/>
+          <line x1="90" y1="52" x2="90" y2="38" stroke="#a0a8b8" stroke-width="2"/>
+          <!-- Signal lines -->
+          <path d="M90 38 Q120 20 148 8" stroke="rgba(255,255,255,0.3)" stroke-width="1" fill="none" stroke-dasharray="4 4"/>
+          <path d="M90 38 Q130 30 158 28" stroke="rgba(255,255,255,0.2)" stroke-width="1" fill="none" stroke-dasharray="4 4"/>
+        </svg>
+      </div>
+      <!-- Orbit arcs -->
+      <div class="credentials__arcs">
+        <div class="arc arc1"></div>
+        <div class="arc arc2"></div>
+      </div>
+      <h2 class="credentials__heading">Here are my career credentials</h2>
+    </div>
+
+    <!-- Cards -->
+    <div class="credentials__cards">
+      <div class="cred-card scroll-reveal">
+        <div class="cred-card__num">01.</div>
+        <h3 class="cred-card__title">BSc in Information Technology</h3>
+        <p class="cred-card__body">Graduated with distinction, specialising in software engineering and systems architecture. Laid the foundation for a career bridging academic excellence with practical industry knowledge.</p>
+      </div>
+      <div class="cred-card scroll-reveal" style="--delay:.15s">
+        <div class="cred-card__num">02.</div>
+        <h3 class="cred-card__title">Honours in Computer Science</h3>
+        <p class="cred-card__body">Pursued advanced research in distributed systems and machine learning applications. Developed the analytical rigour that shapes every module delivered to students at Belgium Campus.</p>
+      </div>
+      <div class="cred-card scroll-reveal" style="--delay:.3s">
+        <div class="cred-card__num">03.</div>
+        <h3 class="cred-card__title">7+ Years Academic &amp; Industry Experience</h3>
+        <p class="cred-card__body">Progressed from Junior Lecturer to Head of IT, mentoring hundreds of students and leading curriculum design for cutting-edge programming and web development modules.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────────────────────────────────────
+       3. ABOUT / GET TO KNOW REASON
+  ─────────────────────────────────────────────────── -->
+  <section class="about" id="about">
+    <div class="about__inner">
+      <div class="about__text scroll-reveal">
+        <h2 class="about__heading">Get To Know Reason!</h2>
+        <p class="about__body">Reason Sithole is a forward-thinking IT educator with a passion for making complex technology concepts accessible and exciting. His teaching philosophy blends real-world industry experience with innovative pedagogical methods — transforming the classroom into a launchpad for the next generation of tech professionals.</p>
+      </div>
+      <div class="about__cards">
+        <div class="about__img-card scroll-reveal" style="--delay:.1s">
+          <div class="about__img-overlay">
+            <h3>Innovative Teaching</h3>
+            <p>Pioneering new approaches to software education that connect theory to live industry practice.</p>
+          </div>
+          <!-- Tech circuit background via CSS -->
+          <div class="about__img-bg circuit"></div>
+        </div>
+        <div class="about__img-card scroll-reveal" style="--delay:.25s">
+          <div class="about__img-overlay">
+            <h3>AI &amp; Future Tech</h3>
+            <p>Bridging the gap between academic learning and emerging technologies like AI, cloud, and blockchain.</p>
+          </div>
+          <div class="about__img-bg neural"></div>
+        </div>
+      </div>
+
+      <!-- Info mosaic grid (image 8) -->
+      <div class="about__mosaic scroll-reveal">
+        <div class="mosaic-large">
+          <div class="mosaic-bg circuit2"></div>
+          <span class="mosaic-label">Add more info</span>
+          <p class="mosaic-body">Reason actively integrates industry partnerships into his curriculum, ensuring students gain exposure to real enterprise environments and cutting-edge tools used by leading tech companies.</p>
+        </div>
+        <div class="mosaic-col">
+          <div class="mosaic-small">
+            <div class="mosaic-bg binary"></div>
+            <span class="mosaic-label-sm">Add more info</span>
+            <span class="mosaic-sub">Research &amp; Innovation</span>
+          </div>
+          <div class="mosaic-small">
+            <div class="mosaic-bg keyboard"></div>
+            <span class="mosaic-label-sm">Add more info</span>
+            <span class="mosaic-sub">Lorem ipsum</span>
+          </div>
+          <div class="mosaic-small">
+            <div class="mosaic-bg data-stream"></div>
+            <span class="mosaic-label-sm">Add more info</span>
+            <span class="mosaic-sub">Lorem ipsum</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────────────────────────────────────
+       4. TECHNICAL ROLES
+  ─────────────────────────────────────────────────── -->
+  <section class="roles" id="roles">
+    <div class="roles__inner">
+      <h2 class="roles__heading scroll-reveal">Technical Roles in my career.</h2>
+      <p class="roles__intro scroll-reveal">Technical experts, such as aerospace and mechanical engineers, computer scientists, and materials scientists, play pivotal roles in Mars missions. They design and maintain spacecraft systems, ensuring safe entry and exploration on the Red Planet. Mission specialists, like astronauts and scientists, also contribute to scientific research and experiments on Mars.</p>
+
+      <div class="roles__grid">
+        <div class="role-card scroll-reveal">
+          <div class="role-card__icon">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="22" fill="rgba(107,148,180,0.2)" stroke="rgba(107,148,180,0.5)" stroke-width="1.5"/><path d="M16 32 Q18 20 24 16 Q30 20 32 32" fill="none" stroke="#8ab4d0" stroke-width="2"/><circle cx="24" cy="13" r="4" fill="#8ab4d0"/><path d="M18 28 Q24 24 30 28" fill="none" stroke="#8ab4d0" stroke-width="1.5"/><circle cx="20" cy="34" r="2.5" fill="#8ab4d0"/><circle cx="28" cy="34" r="2.5" fill="#8ab4d0"/></svg>
+          </div>
+          <h3 class="role-card__title">Junior Lecturer</h3>
+          <p class="role-card__body">Designs and tests curriculum modules for introductory programming and web development, accounting for diverse student backgrounds, hands-on lab sessions, and industry-aligned projects.</p>
+        </div>
+        <div class="role-card scroll-reveal" style="--delay:.15s">
+          <div class="role-card__icon">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="22" fill="rgba(107,148,180,0.2)" stroke="rgba(107,148,180,0.5)" stroke-width="1.5"/><rect x="16" y="28" width="16" height="6" rx="2" fill="#8ab4d0"/><path d="M20 28 L20 22 Q24 16 28 22 L28 28" fill="none" stroke="#8ab4d0" stroke-width="2"/><circle cx="24" cy="14" r="5" fill="#8ab4d0" opacity="0.7"/></svg>
+          </div>
+          <h3 class="role-card__title">Lecturer</h3>
+          <p class="role-card__body">Studies emerging trends in software engineering and cloud computing, supporting long-term student sustainability and conducting academic research published in peer-reviewed journals.</p>
+        </div>
+        <div class="role-card scroll-reveal" style="--delay:.3s">
+          <div class="role-card__icon">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="22" fill="rgba(107,148,180,0.2)" stroke="rgba(107,148,180,0.5)" stroke-width="1.5"/><circle cx="24" cy="18" r="6" fill="none" stroke="#8ab4d0" stroke-width="2"/><path d="M14 38 Q14 28 24 28 Q34 28 34 38" fill="#8ab4d0" opacity="0.6"/><circle cx="24" cy="18" r="3" fill="#8ab4d0"/></svg>
+          </div>
+          <h3 class="role-card__title">Head of IT</h3>
+          <p class="role-card__body">Develops advanced IT strategy, infrastructure planning, and curriculum innovation to safeguard the department's academic excellence and ensure graduates are equipped for tomorrow's workforce.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────────────────────────────────────
+       5. GALLERY / IMAGE CAROUSEL (Belgium Campus)
+  ─────────────────────────────────────────────────── -->
+  <section class="gallery" id="gallery">
+    <div class="gallery__inner">
+      <div class="gallery__carousel-wrap">
+        <button class="carousel-btn carousel-btn--prev" id="galleryPrev" aria-label="Previous">&#8249;</button>
+        <div class="gallery__track" id="galleryTrack">
+          <!-- Slide 1 -->
+          <div class="gallery__slide">
+            <div class="gallery__card bc-logo">
+              <div class="bc-logo-inner">
+                <span class="bc-icon">b</span>
+                <div>
+                  <div class="bc-name">BELGIUM</div>
+                  <div class="bc-name">CAMPUS</div>
+                  <div class="bc-sub">iTversity</div>
+                </div>
+              </div>
+            </div>
+            <div class="gallery__card portrait">
+              <div class="portrait-img"></div>
+            </div>
+            <div class="gallery__card bc-building">
+              <div class="building-inner">
+                <div class="building-facade"></div>
+                <div class="building-label">BELGIUM<br>CAMPUS</div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="gallery__slide">
+            <div class="gallery__card tech-card">
+              <div class="tech-bg"></div>
+              <span class="tech-label">WEB DEVELOPMENT</span>
+            </div>
+            <div class="gallery__card grad-photo">
+              <div class="grad-inner"></div>
+            </div>
+            <div class="gallery__card space-card">
+              <div class="space-bg"></div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-btn carousel-btn--next" id="galleryNext" aria-label="Next">&#8250;</button>
+      </div>
+
+      <div class="gallery__dots" id="galleryDots">
+        <button class="g-dot active" data-index="0"></button>
+        <button class="g-dot" data-index="1"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────────────────────────────────────
+       6. TESTIMONIALS
+  ─────────────────────────────────────────────────── -->
+  <section class="testimonials" id="testimonials">
+    <h2 class="testimonials__heading scroll-reveal">Testimonials from BC Staff &amp; Students</h2>
+
+    <div class="testimonials__carousel" id="testimonialsCarousel">
+      <!-- Slide 1 -->
+      <div class="testimonial-slide active">
+        <div class="testimonials__row">
+          <div class="testimonial-card scroll-reveal">
+            <h3 class="t-card__title">Perfect Case Record!</h3>
+            <p class="t-card__body">Reason consistently achieves one of the highest student pass rates in the department, with a track record of turning struggling students into confident, job-ready developers through patient and structured guidance.</p>
+            <div class="t-card__author">
+              <div class="t-card__avatar">
+                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="24" fill="#d0cce4"/><circle cx="24" cy="18" r="8" fill="#a09ab8"/><path d="M8 42 Q8 30 24 30 Q40 30 40 42" fill="#a09ab8"/></svg>
+              </div>
+              <div>
+                <strong>1st Year student:</strong>
+                <p>He's a great C# lecturer, I grasped the basic concepts within a week!</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card scroll-reveal" style="--delay:.15s">
+            <h3 class="t-card__title">Changing the bound of teaching IT.</h3>
+            <p class="t-card__body">Records of his career and student progress precede him, deeming him one of the top 10 lecturers in Pretoria. His innovative methods and deep commitment to student success set a new standard in IT education.</p>
+            <div class="t-card__author">
+              <div class="t-card__avatar staff">
+                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="24" fill="#ccdce8"/><circle cx="24" cy="18" r="8" fill="#7a9ab0"/><path d="M8 42 Q8 30 24 30 Q40 30 40 42" fill="#7a9ab0"/></svg>
+              </div>
+              <div>
+                <strong>Edward Van Niekerk:</strong>
+                <p>I highly recommend Reason for any programming module, his students have a high pass rate!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="testimonial-slide">
+        <div class="testimonials__row">
+          <div class="testimonial-card">
+            <h3 class="t-card__title">A Truly Inspiring Mentor.</h3>
+            <p class="t-card__body">Mr Sithole has an incredible ability to connect with students from all walks of life. He breaks down complex algorithms into digestible, real-world scenarios that make the material genuinely exciting.</p>
+            <div class="t-card__author">
+              <div class="t-card__avatar">
+                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="24" fill="#d0cce4"/><circle cx="24" cy="18" r="8" fill="#a09ab8"/><path d="M8 42 Q8 30 24 30 Q40 30 40 42" fill="#a09ab8"/></svg>
+              </div>
+              <div>
+                <strong>3rd Year student:</strong>
+                <p>His final-year project guidance helped me land my first developer role!</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <h3 class="t-card__title">Industry Standard Education.</h3>
+            <p class="t-card__body">The curriculum Reason designed for our Web Development module is indistinguishable from what companies actually use. Students graduate with portfolios ready to impress any tech hiring team.</p>
+            <div class="t-card__author">
+              <div class="t-card__avatar staff">
+                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="24" fill="#ccdce8"/><circle cx="24" cy="18" r="8" fill="#7a9ab0"/><path d="M8 42 Q8 30 24 30 Q40 30 40 42" fill="#7a9ab0"/></svg>
+              </div>
+              <div>
+                <strong>Department HOD:</strong>
+                <p>Reason elevates every team he's part of. An absolute asset to Belgium Campus.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dots -->
+    <div class="t-dots">
+      <button class="t-dot active" data-index="0"></button>
+      <button class="t-dot" data-index="1"></button>
+      <button class="t-dot" data-index="2"></button>
+    </div>
+  </section>
+
+  <!-- ───────────────────────────────────────────────
+       7. TIMELINE / MILESTONES  (image 9)
+  ─────────────────────────────────────────────────── -->
+  <section class="timeline" id="timeline">
+    <div class="timeline__inner">
+      <h2 class="timeline__heading scroll-reveal">Career Milestones</h2>
+
+      <div class="timeline__list">
+        <div class="tl-item scroll-reveal">
+          <div class="tl-item__thumb mars1"></div>
+          <div class="tl-item__body">
+            <span class="tl-item__text">Appointed Junior Lecturer at Belgium Campus iTversity — began shaping the next generation of IT professionals.</span>
+          </div>
+          <div class="tl-item__meta">
+            <span class="tl-item__date">2017</span>
+            <button class="tl-item__btn" aria-label="Learn more">&#8594;</button>
+          </div>
+        </div>
+
+        <div class="tl-item scroll-reveal" style="--delay:.1s">
+          <div class="tl-item__thumb mars2"></div>
+          <div class="tl-item__body">
+            <span class="tl-item__text">Promoted to full Lecturer — introduced project-based learning and hackathon culture to the department.</span>
+          </div>
+          <div class="tl-item__meta">
+            <span class="tl-item__date">2019</span>
+            <button class="tl-item__btn" aria-label="Learn more">&#8594;</button>
+          </div>
+        </div>
+
+        <div class="tl-item scroll-reveal" style="--delay:.2s">
+          <div class="tl-item__thumb mars3"></div>
+          <div class="tl-item__body">
+            <span class="tl-item__text">Appointed Head of IT — led a department-wide curriculum redesign integrating AI, cloud computing, and DevOps.</span>
+          </div>
+          <div class="tl-item__meta">
+            <span class="tl-item__date">2022</span>
+            <button class="tl-item__btn" aria-label="Learn more">&#8594;</button>
+          </div>
+        </div>
+
+        <div class="tl-item scroll-reveal" style="--delay:.3s">
+          <div class="tl-item__thumb mars4"></div>
+          <div class="tl-item__body">
+            <span class="tl-item__text">Recognised as one of Pretoria's top 10 IT lecturers — continued mentoring and research into pedagogical innovation.</span>
+          </div>
+          <div class="tl-item__meta">
+            <span class="tl-item__date">2024</span>
+            <button class="tl-item__btn" aria-label="Learn more">&#8594;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────────────────────────────────────
+       8. CONTACT SECTION  (images 10–12)
+  ─────────────────────────────────────────────────── -->
+  <section class="contact" id="contact">
+    <!-- Dark space banner -->
+    <div class="contact__banner">
+      <div class="contact__banner-stars"></div>
+      <div class="contact__banner-earth"></div>
+      <div class="contact__banner-moon"></div>
+      <div class="contact__banner-satellite">
+        <svg viewBox="0 0 180 140" xmlns="http://www.w3.org/2000/svg">
+          <rect x="70" y="52" width="40" height="36" rx="6" fill="#d0d5e0" stroke="#a0a8b8" stroke-width="2"/>
+          <rect x="4" y="58" width="62" height="24" rx="4" fill="#3a5a8a" stroke="#5a7aaa" stroke-width="1.5"/>
+          <line x1="25" y1="58" x2="25" y2="82" stroke="#5a7aaa" stroke-width="1"/>
+          <line x1="45" y1="58" x2="45" y2="82" stroke="#5a7aaa" stroke-width="1"/>
+          <rect x="114" y="58" width="62" height="24" rx="4" fill="#3a5a8a" stroke="#5a7aaa" stroke-width="1.5"/>
+          <line x1="133" y1="58" x2="133" y2="82" stroke="#5a7aaa" stroke-width="1"/>
+          <line x1="153" y1="58" x2="153" y2="82" stroke="#5a7aaa" stroke-width="1"/>
+          <ellipse cx="90" cy="38" rx="22" ry="14" fill="#c0c8d8" stroke="#a0a8b8" stroke-width="2"/>
+          <line x1="90" y1="52" x2="90" y2="38" stroke="#a0a8b8" stroke-width="2"/>
+          <!-- Radial signal lines -->
+          <line x1="90" y1="70" x2="90" y2="20" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+          <line x1="90" y1="70" x2="130" y2="35" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+          <line x1="90" y1="70" x2="50" y2="35" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+          <line x1="90" y1="70" x2="150" y2="60" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+          <line x1="90" y1="70" x2="30" y2="60" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+        </svg>
+      </div>
+      <h2 class="contact__title">Contact me</h2>
+      <p class="contact__subtitle">Reach out for collaborations, speaking engagements, or to learn more about Belgium Campus iTversity programmes.</p>
+    </div>
+
+    <!-- Contact form -->
+    <div class="contact__form-wrap">
+      <div class="contact__form">
+        <div class="form-row form-row--full">
+          <input type="email" class="form-input" placeholder="Email" />
+        </div>
+        <div class="form-row form-row--half">
+          <input type="text" class="form-input" placeholder="First name" />
+          <input type="text" class="form-input" placeholder="Last Name" />
+        </div>
+        <div class="form-row form-row--full">
+          <input type="text" class="form-input" placeholder="Address" />
+        </div>
+        <div class="form-row form-row--full">
+          <div class="form-select-wrap" id="positionWrap">
+            <input type="text" class="form-input form-input--select" id="positionInput" placeholder="Position" readonly />
+            <span class="form-select-arrow">&#8964;</span>
+            <div class="form-dropdown" id="positionDropdown">
+              <div class="form-dropdown-item" data-value="">Enter Position or Select one</div>
+              <div class="form-dropdown-item" data-value="Hiring Manager">Hiring Manager</div>
+              <div class="form-dropdown-item" data-value="Data Scientist">Data Scientist</div>
+              <div class="form-dropdown-item" data-value="Software Engineer">Software Engineer</div>
+              <div class="form-dropdown-item" data-value="Human Resources">Human Resources</div>
+              <div class="form-dropdown-item" data-value="Marketing & Communications">Marketing &amp; Communications</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-row form-row--half">
+          <input type="tel" class="form-input" placeholder="Mobile phone ( optional )" />
+          <input type="tel" class="form-input" placeholder="Phone ( optional )" />
+        </div>
+        <div class="form-row form-row--full">
+          <textarea class="form-input form-textarea" placeholder="Message"></textarea>
+        </div>
+        <div class="form-row">
+          <button class="btn btn--send" id="sendBtn">Send</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────────────────────────────────────
+       FOOTER
+  ─────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">RS<span class="dot">.</span></div>
+      <p class="footer__copy">© 2025 Reason Sithole · Belgium Campus iTversity · All rights reserved</p>
+      <div class="footer__links">
+        <a href="#hero">Home</a>
+        <a href="#credentials">Credentials</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
